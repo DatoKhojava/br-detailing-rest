@@ -3,7 +3,7 @@ import mongooseConnect from "../mongodb/mongodb";
 
 const appSetup = async (app: Express) => {
   try {
-    await Promise.all([mongooseConnect]);
+    await Promise.all([mongooseConnect()]);
 
     console.log("💾 Database connected successfully!");
     const port = process.env.APP_PORT || 8000;
