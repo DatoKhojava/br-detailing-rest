@@ -1,11 +1,12 @@
-import { Router, Request, Response } from "express";
-import UserModel from "../mongodb/schema/user.schema";
+import { Router } from "express";
 import jwt from "jsonwebtoken";
+import UserModel from "../mongodb/schema/user.schema";
 
 const controller = Router();
 
 controller.post("/", async (req: any, res: any) => {
-  const { name, lastname, privateNumber, email, password } = req.body;
+  const { name, lastname, privateNumber, email, password, phoneNumber } =
+    req.body;
 
   const exUser = await UserModel.findOne({ privateNumber });
 
@@ -21,6 +22,7 @@ controller.post("/", async (req: any, res: any) => {
       privateNumber,
       email,
       password,
+      phoneNumber,
     });
 
     const access_token = jwt.sign(
