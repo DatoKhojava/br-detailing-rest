@@ -12,11 +12,11 @@ export interface IVehicle extends Document {
   category: string; // (სედანი, ჰეჩბექი, ლიმუზინი)
   transmission: string; // (ავტომატიკა, მექანიკა, ვარიატორი)
   steeringWheel: string; // (მარჯვენა, მარცხენა)
-  driveWheels: string; // enum (წინა, უკანა, 4x4)
-  technicalInspection: boolean; // (კი, არა)
-  catalyst: boolean; // (კი, არა)
+  driveWheels: string; // (წინა, უკანა, 4x4)
+  // technicalInspection: boolean; // (კი, არა)
+  // catalyst: boolean; // (კი, არა)
   serialNumber: string; // DA-010-TO
-  // airbags: number; // 12
+  airbags: boolean; // კი - არა
   vinCode: string;
   // gallery: string // (ავტომობილის ფოტოები)
   // history: [string];

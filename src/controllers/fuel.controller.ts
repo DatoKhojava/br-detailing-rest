@@ -1,9 +1,10 @@
 import { Router } from "express";
 import Fuel from "../mongodb/schema/fuel.schema";
+import authMiddleware from "../middleware/authMiddleware";
 
 const controller = Router();
 
-controller.post("/", async (req: any, res: any) => {
+controller.post("/", authMiddleware, async (req: any, res: any) => {
   const { value, localization } = req.body;
 
   const exFuelType = await Fuel.findOne({ value });
@@ -31,7 +32,7 @@ controller.post("/", async (req: any, res: any) => {
   }
 });
 
-controller.get("/", async (req: any, res: any) => {
+controller.get("/", authMiddleware, async (req: any, res: any) => {
   const lang = req.headers["accept-language"];
 
   const results = await Fuel.find(

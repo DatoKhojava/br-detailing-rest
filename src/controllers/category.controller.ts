@@ -1,9 +1,10 @@
 import { Router } from "express";
 import Category from "../mongodb/schema/category.chema";
+import authMiddleware from "../middleware/authMiddleware";
 
 const controller = Router();
 
-controller.post("/", async (req: any, res: any) => {
+controller.post("/", authMiddleware, async (req: any, res: any) => {
   const { value, localization } = req.body;
 
   const exFuelType = await Category.findOne({ value });

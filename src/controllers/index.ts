@@ -5,6 +5,7 @@ import transmissionRouter from "./transmission.controller";
 import categoryRouter from "./category.controller";
 import fuelRouter from "./fuel.controller";
 import steeringWheelRouter from "./steeringWheel.controller";
+import driveWheelsRouter from "./driveWheels.controller"
 
 export {
   userRouter,
@@ -14,4 +15,5 @@ export {
   categoryRouter,
   fuelRouter,
   steeringWheelRouter,
+  driveWheelsRouter,
 };

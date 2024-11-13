@@ -7,6 +7,7 @@ import {
   categoryRouter,
   fuelRouter,
   steeringWheelRouter,
+  driveWheelsRouter,
 } from "../controllers";
 // import SwaggerUi from "swagger-ui-express"
 
@@ -23,7 +24,8 @@ const routerSetup = (app: Express) =>
     .use("/api/vehicles", vehicleRouter)
     .use("/api/categories", categoryRouter)
     .use("/api/fuel", fuelRouter)
-    .use("/api/wheelSide", steeringWheelRouter);
+    .use("/api/wheelSide", steeringWheelRouter)
+    .use("/api/driveType", driveWheelsRouter);
 // .use("/docs", SwaggerUi.serve, SwaggerUi.setup(swaggerSpec))
 
 export default routerSetup;

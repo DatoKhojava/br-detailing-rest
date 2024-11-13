@@ -9,4 +9,3 @@ export interface IHistory extends Document {
     endDate: string
     comment: string
 }
-
