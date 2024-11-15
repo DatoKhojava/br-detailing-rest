@@ -12,14 +12,15 @@ const VehicleScheme = new Schema<IVehicle>(
     engine: { type: Number, required: true },
     mileage: { type: Number, required: true },
     category: { type: String, required: true },
-    transmission: {type: String, required: true},
-
-
-    serialNumber: { type: String, required: true },
-    vinCode: { type: String, required: true },
-    // transmition: { type: String, required: true },
-    // techPassport: string image
-    // gallery: string image
+    transmission: { type: String, required: true },
+    steeringWheel: { type: String, required: true },
+    driveWheels: { type: String, required: true },
+    // technicalInspection: {type: Boolean}
+    // catalyst: {type: Boolean}
+    serialNumber: { type: String, required: true, unique: true },
+    airbags: { type: Boolean, required: true },
+    vinCode: { type: String, required: true, unique: true },
+    // gallery: { type: String },
   },
   { timestamps: true }
 );

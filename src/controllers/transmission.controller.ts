@@ -22,3 +22,4 @@ controller.get("/", async (req: any, res: any) => {
 });
 
 export default controller;
+

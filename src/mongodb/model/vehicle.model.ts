@@ -19,5 +19,4 @@ export interface IVehicle extends Document {
   airbags: boolean; // კი - არა
   vinCode: string;
   // gallery: string // (ავტომობილის ფოტოები)
-  // history: [string];
 }
